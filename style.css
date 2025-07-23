@@ -246,3 +246,37 @@ body {
     }
 
 }
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 40px;
+    }
+    
+    header img {
+        width: 350px;
+    }
+
+    header p {
+        font-size: 25px;
+    }
+
+    nav div {
+        font-size: 35px;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    main {
+        font-size: 30px;
+    }
+
+    .popup {
+        width: 250px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
