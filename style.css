@@ -18,6 +18,10 @@ body {
     font-style: normal;
   }
 
+  #listdiv li {
+    padding: 2;
+  }
+
   img {
     height: auto;
     width: 275px;
@@ -161,9 +165,9 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    left: 50%;         
+    left:70%;         
     transform: translateX(-50%);  
-    width: 300px;       
+    width: 250px;       
     max-width: 90vw;    
     background: white;
     border: 1px solid #ccc;
