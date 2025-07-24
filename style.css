@@ -166,6 +166,12 @@ body {
   }
   
 
+  @media (max-width: 407px) {
+    main ul li {
+      font-size: 14px;
+    }
+}
+
   @media (max-width: 376px) {
     header img {
         height: auto;
@@ -231,7 +237,7 @@ body {
       
 }
 
-@media (max-width: 338px) {
+  @media (max-width: 350px) {
     header img {
         height: auto;
         width: 195px;
@@ -241,13 +247,17 @@ body {
       font-size: 14px;
     }
 
+    main ul li {
+      font-size: 12px;
+    }
+
     nav div {
         font-size: 11px;
     }
 
 }
 
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     body {
         font-size: 40px;
     }
