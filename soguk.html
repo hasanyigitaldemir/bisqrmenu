@@ -29,9 +29,9 @@
         </div>
    </nav>
 
-   <div style="display: flex; justify-content: center;">
+   <div style="display: flex; justify-content: center; opacity: 40%;">
     <p>
-        <i>Ürünlerin üzerine tıklayınız! ;)</i>
+        Ürünlerin üzerine tıklayınız! ;)
     </p>
    </div>
 
@@ -205,6 +205,25 @@
         @ 2025 BİS Coffee 
     </div>
 </footer>
+
+<button id="backToTop" title="Yukarı Çık">↑</button>
+  
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+ 
 
 </body>
 </html>
