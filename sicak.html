@@ -10,11 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const statusElement = document.getElementById("store-status");
+    const now = new Date();
+    const day = now.getDay(); // 0: Pazar, 6: Cumartesi
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    const totalMinutes = hour * 60 + minute;
+
+    // Açılış saatleri (dakika cinsinden)
+    const schedule = {
+      0: [960, 1440],   // Pazar: 16:00 – 0:00
+      1: [390, 1380],   // Pazartesi/Haftaiçi/Cumartesi: 06:30 – 23:00
+      2: [390, 1380],
+      3: [390, 1380],
+      4: [390, 1380],
+      5: [390, 1380],
+      6: [390, 1380], 
+    };
+
+    const [start, end] = schedule[day];
+    const isOpen = totalMinutes >= start && totalMinutes <= end;
+
+    statusElement.textContent = isOpen ? "Buyrun, şuan açığız!" : "Yarın içelim, kapalıyız :(";
+  });
+</script>
+
    <header>
     <a href="index.html">
         <img src="bislogo.png" alt="">
     </a>
     <p>Takeaway</p>
+    <h4 style="margin-top: -10px; color: brown;">Durum: <span id="store-status"></span></h4>
    </header>
    
    <nav>
@@ -62,7 +91,7 @@
                 </div>
             </li> 
 
-            <li class="menu-item"><img src="bislogo2.png" alt="">Americano - 120₺
+            <li class="menu-item"><img src="bislogo2.png" alt="">Amerikano - 120₺
                 <div class="popup">
                     <img src="images/sicak/americano.jpg" alt="Americano photo">
                     <p>Yoğun espresso tadını, daha yumuşak bir içimle sunar.</p>
@@ -156,6 +185,10 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
+
+<a href="https://wa.me/90" target="_blank" id="whatsappButton" title="WhatsApp ile İletişim">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
 
 </body>
 </html>
